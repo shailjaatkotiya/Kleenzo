@@ -47,22 +47,4 @@ const menuButtonStyle = {
   cursor: 'pointer',
 };
 
-const navStyle = {
-  display: 'none',
-  flexDirection: 'column',
-  position: 'absolute',
-  top: '60px', // Adjust based on header height
-  left: '0',
-  width: '100%',
-  backgroundColor: '#5A639C',
-};
-
-const linkStyle = {
-  color: '#E2BBE9',
-  padding: '10px',
-  textDecoration: 'none',
-  display: 'block',
-  textAlign: 'center',
-};
-
 export default Header;
