@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,12 +14,6 @@ const Header = () => {
           <FontAwesomeIcon icon={faBars} />
         </button>
         <h1>Kleenzo</h1>
-        <nav style={{ ...navStyle, display: menuOpen ? 'block' : 'none' }}>
-          <Link to="/" style={linkStyle}>Home</Link>
-          <Link to="/about" style={linkStyle}>About Us</Link>
-          <Link to="/products" style={linkStyle}>Products</Link>
-          <Link to="/contact" style={linkStyle}>Contact</Link>
-        </nav>
       </div>
     </header>
   );

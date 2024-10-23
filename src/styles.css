@@ -101,3 +101,236 @@ button {
     display: block;
   }
 }
+
+.carousel-root .carousel .control-dots .carousel .slide {
+  width: 250px;
+}
+
+:root {
+  --color-darkest: #5A639C;
+  --color-dark: #7776B3;
+  --color-lav: #9B86BD;
+  --color-light: #E2BBE9;
+}
+
+.products-section {
+  margin: 20px;
+  padding: 20px;
+  background-color: var(--color-light);
+  border-radius: 8px;
+}
+
+.products-section h2 {
+  font-size: 2em;
+  color: var(--color-darkest);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid var(--color-dark);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-carousel {
+  width: 100%;
+  height: 200px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-info h3 {
+  color: var(--color-darkest);
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  color: var(--color-dark);
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.product-price {
+  font-weight: bold;
+  color: var(--color-darkest);
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.testimonials {
+  background-color: var(--color-light);
+  padding: 30px;
+  color: var(--color-darkest);
+}
+
+.testimonials h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--color-darkest);
+}
+
+.question-answer {
+  margin-bottom: 30px;
+  background: var(--color-dark);
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.question-answer h3 {
+  color: var(--color-light);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.question-answer p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.question-answer ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  margin-bottom: 10px;
+}
+
+.question-answer ul li {
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.price-selector {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid var(--color-dark);
+  margin-top: 10px;
+  font-size: 16px;
+}
+.container {
+  width: 300px; /* Set your desired width */
+  height: 200px; /* Set your desired height */
+  overflow: hidden; /* Prevent overflow */
+  position: relative; /* Set relative position for absolute children */
+}
+
+.image {
+  position: absolute; /* Positioning it inside the container */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the image */
+  max-width: 100%; /* Ensure it does not exceed the width */
+  max-height: 100%; /* Ensure it does not exceed the height */
+  object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* HeroSection.css */
+.hero-section {
+  background-color: var(--color-light);
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+  color: var(--color-darkest);
+}
+
+:root {
+  --bubble-color: rgba(255, 255, 255, 0.5);
+}
+
+.products-section {
+  position: relative;
+  overflow: hidden; /* To hide overflowing bubbles */
+}
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+.bubble {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: var(--bubble-color);
+  border-radius: 50%;
+  animation: bubble 4s infinite;
+  pointer-events: none; /* Prevent interactions */
+}
+
+.bubble:nth-child(1) {
+  left: 10%;
+  animation-duration: 3.5s;
+}
+
+.bubble:nth-child(2) {
+  left: 20%;
+  animation-duration: 4s;
+}
+
+.bubble:nth-child(3) {
+  left: 30%;
+  animation-duration: 4.5s;
+}
+
+.bubble:nth-child(4) {
+  left: 40%;
+  animation-duration: 3.8s;
+}
+
+.bubble:nth-child(5) {
+  left: 50%;
+  animation-duration: 4.2s;
+}
+
+.bubble:nth-child(6) {
+  left: 60%;
+  animation-duration: 3.6s;
+}
+
+.bubble:nth-child(7) {
+  left: 70%;
+  animation-duration: 4.1s;
+}
+
+.bubble:nth-child(8) {
+  left: 80%;
+  animation-duration: 3.9s;
+}
+
+.bubble:nth-child(9) {
+  left: 90%;
+  animation-duration: 4.4s;
+}
