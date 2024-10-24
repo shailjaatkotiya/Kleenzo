@@ -269,6 +269,11 @@ button {
   overflow: hidden; /* To hide overflowing bubbles */
 }
 
+.productPrice{
+  display: flex;
+  flex-direction: row;
+}
+
 @keyframes bubble {
   0% {
     transform: translateY(0);

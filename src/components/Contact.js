@@ -15,8 +15,8 @@ const Contact = () => (
       
       <button type="submit" style={{ padding: '10px 20px', backgroundColor: '#7776B3', color: '#fff', border: 'none', borderRadius: '5px' }}>Send</button>
     </form>
-    <p>Phone: +123 456 7890</p>
-    <p>Email: contact@kleenzo.com</p>
+    <p>Phone: 8140888900</p>
+    <p>Kleenzosurfactants@gmail.com</p>
   </section>
 );
 

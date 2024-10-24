@@ -4,8 +4,10 @@ const Footer = () => (
   <footer style={footerStyle}>
     <p>© 2024 Kleenzo. All rights reserved.</p>
     <div>
-      <a href="mailto:contact@kleenzo.com" style={linkStyle}>Email Us</a>
-      <a href="tel:+1234567890" style={linkStyle}>Call Us</a>
+      <a href="mailto:Kleenzosurfactants@gmail.com" style={linkStyle}>Kleenzosurfactants@gmail.com</a>
+      <a href="tel:9904965415" style={linkStyle}>9904965415</a>
+      <a href="tel:8140888900" style={linkStyle}>8140888900</a>
+
     </div>
   </footer>
 );
