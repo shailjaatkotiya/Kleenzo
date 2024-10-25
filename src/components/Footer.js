@@ -5,9 +5,10 @@ const Footer = () => (
     <p>© 2024 Kleenzo. All rights reserved.</p>
     <div>
       <a href="mailto:Kleenzosurfactants@gmail.com" style={linkStyle}>Kleenzosurfactants@gmail.com</a>
-      <a href="tel:9904965415" style={linkStyle}>9904965415</a>
-      <a href="tel:8140888900" style={linkStyle}>8140888900</a>
-
+      <div className='contacts'>
+        <a href="tel:9904965415" style={linkStyle}>9904965415</a>
+        <a href="tel:8140888900" style={linkStyle}>8140888900</a>
+      </div>
     </div>
   </footer>
 );
