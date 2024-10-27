@@ -1,4 +1,5 @@
 import React from 'react';
+import Contact from './Contact';
 
 const Testimonials = () => (
   <section className="testimonials">
@@ -27,6 +28,7 @@ const Testimonials = () => (
       </ul>
       <p>Achieve effortlessly clean, grease-free, and shining dishes with every wash!</p>
     </div>
+    <Contact />
   </section>
 );
 

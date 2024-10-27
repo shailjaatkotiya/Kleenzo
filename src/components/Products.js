@@ -10,7 +10,7 @@ const productList = [
       { size: '5L', mrp: 'Rs. 999', offerPrice: 'Rs. 550' }
     ],
     description: 'Choose our premium laundry liquid for vibrant, fresh-looking clothes that feel soft and last longer. Its advanced formula brightens, gently cares for fabrics, and effectively removes tough stains, all while leaving a long-lasting jasmine scent. Enjoy cleaner, fresher, and brighter laundry with every wash!',
-    images: ['./1.jpeg', './1-1.jpeg', './1-2.jpeg', './1-3.jpeg']
+    images: ['./3.png', './4.png', './5.png', './6.png']
   },
   {
     name: 'Dishwash Gel',
@@ -18,7 +18,7 @@ const productList = [
       { size: '5L', mrp: '849 Rs', offerPrice: '350 Rs' }
     ],
     description: 'Our lime dishwash gel cleans and shines utensils while maintaining a balanced pH, making it gentle on your hands. It effectively removes grease in just one wash, prioritizing skin health as well.',
-    images: ['./2.jpeg', './2-1.jpeg']
+    images: ['./1.png', './2.png']
   },
 ];
 

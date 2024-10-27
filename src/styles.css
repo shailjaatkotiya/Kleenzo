@@ -50,7 +50,8 @@ nav a {
 }
 
 footer {
-  position: fixed;
+  position: relative;
+  overflow: hidden;
   bottom: 0;
   width: 100%;
   background-color: var(--color-darkest);
@@ -338,4 +339,25 @@ button {
 .bubble:nth-child(9) {
   left: 90%;
   animation-duration: 4.4s;
+}
+
+.contact-us {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--color-light);
+  color: var(--color-darkest);
+}
+
+.whatsapp-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #25d366; /* WhatsApp green */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebc59;
 }
