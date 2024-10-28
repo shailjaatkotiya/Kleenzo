@@ -1,8 +1,7 @@
 :root {
-  --color-darkest: #5A639C;
-  --color-dark: #7776B3;
-  --color-lav: #9B86BD;
-  --color-light: #E2BBE9;
+  --color-darkest: #1ebc59 ;
+  --color-dark: #1679AB ;
+  --color-light: #074173 ;
 }
 
 body {
@@ -17,7 +16,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--color-darkest);
+  background: linear-gradient(to right, var(--color-dark), var(--color-darkest));
   color: #fff;
   padding: 10px;
   text-align: center;
@@ -54,7 +53,7 @@ footer {
   overflow: hidden;
   bottom: 0;
   width: 100%;
-  background-color: var(--color-darkest);
+  background: linear-gradient(to right, var(--color-dark), var(--color-darkest));
   color: #fff;
   text-align: center;
   padding: 10px;
@@ -108,10 +107,9 @@ button {
 }
 
 :root {
-  --color-darkest: #5A639C;
-  --color-dark: #7776B3;
-  --color-lav: #9B86BD;
-  --color-light: #E2BBE9;
+  --color-darkest: #1ebc59 ;
+  --color-dark: #1679AB ;
+  --color-light: #074173 ;
 }
 
 .products-section {
@@ -342,6 +340,12 @@ button {
 }
 
 .contact-us {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   text-align: center;
   padding: 20px;
   background-color: var(--color-light);

@@ -61,8 +61,8 @@ const ProductCard = ({ product }) => {
           ))}
         </select>
         <p className='productPrice'>
-          <span style={{ color: '#5A639C', fontWeight: 'bold'  }}>{selectedPrice.offerPrice}</span>
-          <span style={{ textDecoration: 'line-through', color: '#E2BBE9', marginLeft: '10px'  }}>{selectedPrice.mrp}</span>
+          <span style={{ color: '#1ebc59 ', fontWeight: 'bold'  }}>{selectedPrice.offerPrice}</span>
+          <span style={{ textDecoration: 'line-through', color: '#1ebc59 ', marginLeft: '10px'  }}>{selectedPrice.mrp}</span>
         </p>
         <p className="product-description">{product.description}</p>
       </div>

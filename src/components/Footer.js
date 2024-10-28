@@ -17,7 +17,7 @@ const footerStyle = {
   position: 'fixed',
   bottom: 0,
   width: '100%',
-  backgroundColor: '#5A639C',
+  backgroundColor: '#1ebc59 ',
   color: '#fff',
   textAlign: 'center',
   padding: '10px',
@@ -25,7 +25,7 @@ const footerStyle = {
 };
 
 const linkStyle = {
-  color: '#E2BBE9',
+  color: '#1ebc59 ',
   margin: '0 10px',
   textDecoration: 'none',
 };
