@@ -25,7 +25,7 @@ const productList = [
 const ProductCarousel = ({ product }) => (
   <div className="product-carousel">
     <Carousel
-      showArrows={false}
+      showArrows={true}
       infiniteLoop={false}
       showThumbs={false}
       autoPlay={true}

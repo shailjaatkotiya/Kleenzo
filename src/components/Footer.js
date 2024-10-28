@@ -25,7 +25,7 @@ const footerStyle = {
 };
 
 const linkStyle = {
-  color: '#1ebc59 ',
+  color: 'white ',
   margin: '0 10px',
   textDecoration: 'none',
 };

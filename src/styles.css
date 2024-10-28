@@ -4,6 +4,10 @@
   --color-light: #074173 ;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -86,11 +90,8 @@ button {
   nav {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 60px; /* Adjust based on header height */
     left: 0;
     width: 100%;
-    background-color: var(--color-darkest);
   }
 
   nav.open {
@@ -340,7 +341,7 @@ button {
 }
 
 .contact-us {
-  height: 50vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -1,7 +1,8 @@
 import React from 'react';
 
 const AboutUs = () => (
-  <section style={{ margin: '20px 0px', padding: '10px', background:'linear-gradient(to right, var(--color-dark), var(--color-darkest))'}}>
+  <section style={{ fontFamily:'monospaces', color:'#074173', height:'fit-content', padding: '30px 50px', background:'linear-gradient(to right, var(--color-dark), var(--color-darkest))'}}>
+    <h3>About Us</h3>
     <p>
       Welcome to Kleenzo, where Riddhi and Krunal bring their dedication to delivering exceptional, eco-friendly cleaning solutions to homes across the country. At Kleenzo, we believe that cleaning should be more than a chore it should be a pleasant experience that combines ease, efficiency, and sustainability. Our mission is simple: to provide high-quality, effective cleaning products that care for both your home and the environment.
     </p>

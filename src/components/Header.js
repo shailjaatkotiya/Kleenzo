@@ -66,7 +66,7 @@ const navStyle = {
 
 const linkStyle = {
   color: 'white',
-  padding: '10px',
+  // padding: '10px',
   textDecoration: 'none',
   display: 'block',
   textAlign: 'center',
