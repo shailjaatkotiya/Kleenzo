@@ -4,40 +4,77 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#16864b" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Kleenzo offers detergent liquid, fabric wash, laundry detergent, lime dishwash gel, and strawberry handwash for clean clothes, sparkling utensils, and fresh hands."
+    />
+    <meta
+      name="keywords"
+      content="Kleenzo detergent, detergent liquid, laundry liquid, fabric liquid detergent, dishwash gel, lime dishwash gel, strawberry handwash, handwash, stain remover detergent, home cleaning products"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Kleenzo | Detergent Liquid, Dishwash Gel and Handwash" />
+    <meta
+      property="og:description"
+      content="Shop Kleenzo detergent liquid, lime dishwash gel, and strawberry handwash for fresh laundry, sparkling utensils, and clean hands."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="%PUBLIC_URL%/3.web.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kleenzo | Detergent Liquid, Dishwash Gel and Handwash" />
+    <meta
+      name="twitter:description"
+      content="Detergent liquid, dishwash gel, and strawberry handwash for fresh clothes, grease removal, sparkling utensils, and clean hands."
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <script type="application/ld+json" data-schema="kleenzo">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Kleenzo",
+        "description": "Kleenzo makes detergent liquid, dishwash gel, and handwash for fresh laundry, stain removal, clean utensils, and everyday hand hygiene.",
+        "email": "Kleenzosurfactants@gmail.com",
+        "telephone": "+91-8140888900",
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Kleenzo Washing Liquid Detergent",
+              "description": "Fabric detergent liquid with brighteners, softeners, fabric conditioners, stain removal, and jasmine fragrance.",
+              "category": "Laundry Detergent",
+              "brand": { "@type": "Brand", "name": "Kleenzo" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Kleenzo Lime Dishwash Gel",
+              "description": "Lime dishwash gel for grease removal, sparkling utensils, fresh fragrance, and gentle hand care.",
+              "category": "Dishwashing Detergent",
+              "brand": { "@type": "Brand", "name": "Kleenzo" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Kleenzo Strawberry Handwash",
+              "description": "Strawberry handwash for clean, fresh-feeling hands with sweet fragrance, moisturizing feel, and everyday germ protection.",
+              "category": "Hand Wash",
+              "brand": { "@type": "Brand", "name": "Kleenzo" }
+            }
+          }
+        ]
+      }
+    </script>
+    <title>Kleenzo | Detergent Liquid, Dishwash Gel and Handwash</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>Kleenzo offers detergent liquid, dishwash gel, and handwash. Please enable JavaScript to view products and order details.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

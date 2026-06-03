@@ -1,39 +1,56 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const productList = [
   {
-    name: 'Fabric Liquid',
+    name: 'Kleenzo Washing Liquid Detergent',
+    shortName: 'Washing Liquid',
+    tag: 'Laundry detergent',
     prices: [
       { size: '1L', mrp: 'Rs. 199', offerPrice: 'Rs. 120' },
-      { size: '5L', mrp: 'Rs. 999', offerPrice: 'Rs. 550' }
+      { size: '5L', mrp: 'Rs. 999', offerPrice: 'Rs. 550' },
     ],
-    description: 'Choose our premium laundry liquid for vibrant, fresh-looking clothes that feel soft and last longer. Its advanced formula brightens, gently cares for fabrics, and effectively removes tough stains, all while leaving a long-lasting jasmine scent. Enjoy cleaner, fresher, and brighter laundry with every wash!',
-    images: ['./3.png', './4.png', './5.png', './6.png']
+    description:
+      'A premium liquid detergent for washing machines and bucket wash. It helps remove stains, brighten clothes, soften fabrics, and leave a long-lasting jasmine freshness.',
+    benefits: ['Deep clean', 'Fabric protection', 'Machine and bucket wash'],
+    images: ['/fabric-liquid-new.web.jpg', '/3.web.jpg', '/4.web.jpg', '/5.web.jpg', '/6.web.jpg'],
   },
   {
-    name: 'Dishwash Gel',
-    prices: [
-      { size: '5L', mrp: '849 Rs', offerPrice: '350 Rs' }
-    ],
-    description: 'Our lime dishwash gel cleans and shines utensils while maintaining a balanced pH, making it gentle on your hands. It effectively removes grease in just one wash, prioritizing skin health as well.',
-    images: ['./1.png', './2.png']
+    name: 'Kleenzo Lime Dishwash Gel',
+    shortName: 'Dishwash Gel',
+    tag: 'Kitchen cleaning',
+    prices: [{ size: '5L', mrp: 'Rs. 849', offerPrice: 'Rs. 350' }],
+    description:
+      'A lime dishwash gel that cuts grease, cleans utensils to a shine, and stays gentle on hands with a balanced everyday-use formula.',
+    benefits: ['Tough grease removal', 'Lemon freshness', 'Gentle on hands'],
+    images: ['/dishwash-gel.web.jpg', '/1.web.jpg', '/2.web.jpg'],
+  },
+  {
+    name: 'Kleenzo Strawberry Handwash',
+    shortName: 'Strawberry Handwash',
+    tag: 'Hand hygiene',
+    prices: [{ size: '500ml', mrp: 'Contact for MRP', offerPrice: 'Order Now' }],
+    description:
+      'A strawberry handwash made for clean, fresh-feeling hands with a sweet fragrance, moisturizing feel, and everyday germ protection.',
+    benefits: ['99.9% germ protection', 'Soft and gentle', 'Strawberry fragrance'],
+    images: ['/strawberry-handwash.web.jpg'],
   },
 ];
 
 const ProductCarousel = ({ product }) => (
   <div className="product-carousel">
     <Carousel
-      showArrows={true}
-      infiniteLoop={false}
+      showArrows
+      infiniteLoop
       showThumbs={false}
-      autoPlay={true}
-      interval={3000}
+      showStatus={false}
+      autoPlay
+      interval={3500}
     >
       {product.images.map((imgSrc, index) => (
-        <div key={index} className='container'>
-          <img src={imgSrc} alt={`${product.name} - ${index + 1}`} className="carousel-image image" />
+        <div key={imgSrc} className="product-carousel__slide">
+          <img src={imgSrc} alt={`${product.name} view ${index + 1}`} className="carousel-image" />
         </div>
       ))}
     </Carousel>
@@ -43,39 +60,64 @@ const ProductCarousel = ({ product }) => (
 const ProductCard = ({ product }) => {
   const [selectedPrice, setSelectedPrice] = useState(product.prices[0]);
 
-  const handlePriceChange = (e) => {
-    const selectedOption = product.prices.find(priceOption => priceOption.size === e.target.value);
+  const handlePriceChange = (event) => {
+    const selectedOption = product.prices.find((priceOption) => priceOption.size === event.target.value);
     setSelectedPrice(selectedOption);
   };
 
   return (
-    <div className="product-card">
+    <article className="product-card">
       <ProductCarousel product={product} />
       <div className="product-info">
-        <h3>{product.name}</h3>
-        <select onChange={(e) => handlePriceChange(e, product)} value={selectedPrice.size} className="price-selector">
-          {product.prices.map((priceOption, index) => (
-            <option key={index} value={priceOption.size}>
-              {priceOption.size}
-            </option>
-          ))}
-        </select>
-        <p className='productPrice'>
-          <span style={{ color: '#1ebc59 ', fontWeight: 'bold'  }}>{selectedPrice.offerPrice}</span>
-          <span style={{ textDecoration: 'line-through', color: '#1ebc59 ', marginLeft: '10px'  }}>{selectedPrice.mrp}</span>
-        </p>
+        <p className="product-tag">{product.tag}</p>
+        <h3>{product.shortName}</h3>
         <p className="product-description">{product.description}</p>
+        <ul className="product-benefits">
+          {product.benefits.map((benefit) => (
+            <li key={benefit}>{benefit}</li>
+          ))}
+        </ul>
+        <div className="product-buy-row">
+          <label>
+            <span>Pack size</span>
+            <select onChange={handlePriceChange} value={selectedPrice.size} className="price-selector">
+              {product.prices.map((priceOption) => (
+                <option key={priceOption.size} value={priceOption.size}>
+                  {priceOption.size}
+                </option>
+              ))}
+            </select>
+          </label>
+          <p className="product-price" aria-label={`${selectedPrice.offerPrice} offer price`}>
+            <strong>{selectedPrice.offerPrice}</strong>
+            <span>{selectedPrice.mrp}</span>
+          </p>
+        </div>
+        <a
+          className="button button--product"
+          href={`https://wa.me/918140888900?text=${encodeURIComponent(`I want to order ${product.name} (${selectedPrice.size}).`)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Order {product.shortName}
+        </a>
       </div>
-    </div>
+    </article>
   );
 };
 
 const Products = () => (
-  <section className="products-section">
-    <h2>Our Products</h2>
+  <section className="products-section" id="products">
+    <div className="section-heading">
+      <p className="eyebrow">Kleenzo products</p>
+      <h2>Washing liquid, dishwash, and handwash products made for daily cleaning.</h2>
+      <p>
+        Choose effective Kleenzo products for laundry, stain removal, utensil shine, fresh hands, fragrance, and gentle everyday use.
+      </p>
+    </div>
     <div className="product-list">
-      {productList.map((product, index) => (
-        <ProductCard key={index} product={product} />
+      {productList.map((product) => (
+        <ProductCard key={product.name} product={product} />
       ))}
     </div>
   </section>

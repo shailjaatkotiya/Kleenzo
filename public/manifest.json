@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Kleenzo",
+  "name": "Kleenzo Detergent Liquid, Dishwash Gel and Handwash",
+  "description": "Kleenzo home cleaning products for detergent liquid, fabric wash, dishwash gel, strawberry handwash, stain removal, and sparkling utensils.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#16864b",
+  "background_color": "#fbfdfc"
 }
