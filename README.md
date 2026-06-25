@@ -2,7 +2,7 @@
 
 Marketing and ordering site for **Kleenzo** cleaning products — fabric liquid detergent, lime dishwash gel, and strawberry handwash. Built with React (Create React App). Orders route to WhatsApp.
 
-![Kleenzo home page](docs/home-screenshot.png)
+<img width="1883" height="853" alt="image" src="https://github.com/user-attachments/assets/40c0a3fa-0658-44af-b670-853a7dd169f6" />
 
 ## Products
 
