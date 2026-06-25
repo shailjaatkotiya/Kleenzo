@@ -26,8 +26,8 @@ const HeroSection = () => (
 
     <div className="hero-section__media" aria-label="Kleenzo product preview">
       <img
-        src="/3.web.jpg"
-        alt="Kleenzo fabric liquid detergent for stain removal"
+        src="/hero-google.jpg"
+        alt="Laundry basket of clothes ready for washing with Kleenzo Fabric Liquid detergent"
         loading="eager"
         fetchPriority="high"
       />
