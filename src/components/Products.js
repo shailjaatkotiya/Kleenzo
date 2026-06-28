@@ -1,60 +1,87 @@
 import React, { useState } from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const productList = [
   {
-    name: 'Kleenzo Washing Liquid Detergent',
-    shortName: 'Washing Liquid',
-    tag: 'Laundry detergent',
+    name: 'Kleenzo Phenyl',
+    shortName: 'Phenyl',
+    tag: 'Disinfectant cleaner',
     prices: [
-      { size: '1L', mrp: 'Rs. 199', offerPrice: 'Rs. 120' },
-      { size: '5L', mrp: 'Rs. 999', offerPrice: 'Rs. 550' },
+      { size: '5 LTR', price: 130, pricePerLiter: 26 },
+      { size: '10 LTR', price: 240, pricePerLiter: 24 },
+      { size: '20 LTR', price: 480, pricePerLiter: 24 },
     ],
     description:
-      'A premium liquid detergent for washing machines and bucket wash. It helps remove stains, brighten clothes, soften fabrics, and leave a long-lasting jasmine freshness.',
-    benefits: ['Deep clean', 'Fabric protection', 'Machine and bucket wash'],
-    images: ['/fabric-liquid-new.web.jpg', '/3.web.jpg', '/4.web.jpg', '/5.web.jpg', '/6.web.jpg'],
+      'A disinfectant phenyl for clean floors, long-lasting freshness, and everyday germ protection across homes and workplaces.',
+    benefits: ['Disinfectant action', 'Long-lasting freshness', 'Kills 99.9% germs'],
+    image: '/kleenzo-phenyl.png',
   },
   {
-    name: 'Kleenzo Lime Dishwash Gel',
-    shortName: 'Dishwash Gel',
-    tag: 'Kitchen cleaning',
-    prices: [{ size: '5L', mrp: 'Rs. 849', offerPrice: 'Rs. 350' }],
+    name: 'Kleenzo Floor Cleaner',
+    shortName: 'Floor Cleaner',
+    tag: 'Deep cleaning and shine',
+    prices: [
+      { size: '5 LTR', price: 250, pricePerLiter: 50 },
+      { size: '10 LTR', price: 450, pricePerLiter: 45 },
+      { size: '20 LTR', price: 900, pricePerLiter: 45 },
+    ],
     description:
-      'A lime dishwash gel that cuts grease, cleans utensils to a shine, and stays gentle on hands with a balanced everyday-use formula.',
-    benefits: ['Tough grease removal', 'Lemon freshness', 'Gentle on hands'],
-    images: ['/dishwash-gel.web.jpg', '/1.web.jpg', '/2.web.jpg'],
+      'A floor cleaner made for deep cleaning, bright shine, and a fresh lemon cleaning experience for regular floor care.',
+    benefits: ['Deep cleaning', 'Fresh lemon feel', 'Shine finish'],
+    image: '/kleenzo-floor-cleaner.png',
   },
   {
-    name: 'Kleenzo Strawberry Handwash',
-    shortName: 'Strawberry Handwash',
-    tag: 'Hand hygiene',
-    prices: [{ size: '500ml', mrp: 'Contact for MRP', offerPrice: 'Order Now' }],
+    name: 'Kleenzo Toilet Cleaner',
+    shortName: 'Toilet Cleaner',
+    tag: 'Bathroom cleaning',
+    prices: [
+      { size: '5 LTR', price: 200, pricePerLiter: 40 },
+      { size: '10 LTR', price: 380, pricePerLiter: 38 },
+      { size: '20 LTR', price: 750, pricePerLiter: 37.5 },
+    ],
     description:
-      'A strawberry handwash made for clean, fresh-feeling hands with a sweet fragrance, moisturizing feel, and everyday germ protection.',
-    benefits: ['99.9% germ protection', 'Soft and gentle', 'Strawberry fragrance'],
-    images: ['/strawberry-handwash.web.jpg'],
+      'A toilet cleaner formulated to remove stains, support hygiene, and keep bathrooms fresh through routine cleaning.',
+    benefits: ['Removes stains', 'Hygienic cleaning', 'Fresh bathroom care'],
+    image: '/kleenzo-toilet-cleaner.png',
   },
 ];
 
-const ProductCarousel = ({ product }) => (
-  <div className="product-carousel">
-    <Carousel
-      showArrows
-      infiniteLoop
-      showThumbs={false}
-      showStatus={false}
-      autoPlay
-      interval={3500}
-    >
-      {product.images.map((imgSrc, index) => (
-        <div key={imgSrc} className="product-carousel__slide">
-          <img src={imgSrc} alt={`${product.name} view ${index + 1}`} className="carousel-image" />
-        </div>
-      ))}
-    </Carousel>
-  </div>
+const formatCurrency = (amount) => `Rs. ${amount}`;
+
+const PriceListTable = () => (
+  // <div className="price-list-panel" aria-label="Kleenzo product price list">
+    <div className="price-list-panel__content">
+      <p className="eyebrow">Product price list</p>
+      <h3>Bulk packs for daily cleaning needs.</h3>
+      <div className="price-table-wrap">
+        <table className="price-table">
+          <thead>
+            <tr>
+              <th scope="col">Product</th>
+              <th scope="col">Qty.</th>
+              <th scope="col">Price</th>
+              <th scope="col">Price per liter</th>
+            </tr>
+          </thead>
+          <tbody>
+            {productList.map((product) =>
+              product.prices.map((priceOption, index) => (
+                <tr key={`${product.shortName}-${priceOption.size}`}>
+                  {index === 0 && (
+                    <th scope="rowgroup" rowSpan={product.prices.length}>
+                      {product.shortName}
+                    </th>
+                  )}
+                  <td>{priceOption.size}</td>
+                  <td>{formatCurrency(priceOption.price)}</td>
+                  <td>{formatCurrency(priceOption.pricePerLiter)}</td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  // </div>
 );
 
 const ProductCard = ({ product }) => {
@@ -67,7 +94,9 @@ const ProductCard = ({ product }) => {
 
   return (
     <article className="product-card">
-      <ProductCarousel product={product} />
+      <div className="product-image">
+        <img src={product.image} alt={`${product.name} bottle`} loading="lazy" />
+      </div>
       <div className="product-info">
         <p className="product-tag">{product.tag}</p>
         <h3>{product.shortName}</h3>
@@ -88,14 +117,16 @@ const ProductCard = ({ product }) => {
               ))}
             </select>
           </label>
-          <p className="product-price" aria-label={`${selectedPrice.offerPrice} offer price`}>
-            <strong>{selectedPrice.offerPrice}</strong>
-            <span>{selectedPrice.mrp}</span>
+          <p className="product-price" aria-label={`${formatCurrency(selectedPrice.price)} price`}>
+            <strong>{formatCurrency(selectedPrice.price)}</strong>
+            <span>{formatCurrency(selectedPrice.pricePerLiter)} / LTR</span>
           </p>
         </div>
         <a
           className="button button--product"
-          href={`https://wa.me/918140888900?text=${encodeURIComponent(`I want to order ${product.name} (${selectedPrice.size}).`)}`}
+          href={`https://wa.me/919979555966?text=${encodeURIComponent(
+            `I want to order ${product.name} (${selectedPrice.size}) for ${formatCurrency(selectedPrice.price)}.`
+          )}`}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -110,11 +141,12 @@ const Products = () => (
   <section className="products-section" id="products">
     <div className="section-heading">
       <p className="eyebrow">Kleenzo products</p>
-      <h2>Washing liquid, dishwash, and handwash products made for daily cleaning.</h2>
+      <h2>Phenyl, floor cleaner, and toilet cleaner packs for homes and businesses.</h2>
       <p>
-        Choose effective Kleenzo products for laundry, stain removal, utensil shine, fresh hands, fragrance, and gentle everyday use.
+        Choose 5 LTR, 10 LTR, or 20 LTR packs with clear per-liter pricing for regular cleaning routines.
       </p>
     </div>
+    <PriceListTable />
     <div className="product-list">
       {productList.map((product) => (
         <ProductCard key={product.name} product={product} />

@@ -10,24 +10,24 @@ import './styles.css';
 
 const seoByPath = {
   '/': {
-    title: 'Kleenzo | Detergent Liquid, Dishwash Gel and Handwash',
+    title: 'Kleenzo | Phenyl, Floor Cleaner and Toilet Cleaner',
     description:
-      'Shop Kleenzo detergent liquid, lime dishwash gel, and strawberry handwash for fresh laundry, sparkling utensils, clean hands, and everyday cleaning.',
+      'Shop Kleenzo phenyl, floor cleaner, and toilet cleaner in 5 LTR, 10 LTR, and 20 LTR packs with clear price-per-liter details.',
   },
   '/about': {
     title: 'About Kleenzo | Reliable Home Cleaning Products',
     description:
-      'Learn about Kleenzo, a home cleaning brand focused on effective detergent liquid, dishwash gel, quality ingredients, and responsible cleaning.',
+      'Learn about Kleenzo, a home cleaning brand focused on phenyl, floor cleaner, toilet cleaner, and dependable everyday hygiene.',
   },
   '/products': {
-    title: 'Kleenzo Products | Detergent Liquid, Dishwash Gel and Handwash',
+    title: 'Kleenzo Products | Price List for Phenyl and Cleaners',
     description:
-      'Explore Kleenzo fabric detergent liquid, lime dishwash gel, and strawberry handwash with sizes, benefits, and WhatsApp ordering.',
+      'Explore Kleenzo phenyl, floor cleaner, and toilet cleaner prices for 5 LTR, 10 LTR, and 20 LTR packs with WhatsApp ordering.',
   },
   '/contact': {
-    title: 'Contact Kleenzo | Order Detergent and Dishwash Gel',
+    title: 'Contact Kleenzo | Order Phenyl, Floor Cleaner and Toilet Cleaner',
     description:
-      'Contact Kleenzo on WhatsApp to order detergent liquid, fabric wash, and dishwash gel for clean clothes and sparkling utensils.',
+      'Contact Kleenzo on WhatsApp to order phenyl, floor cleaner, and toilet cleaner packs for home and business cleaning.',
   },
 };
 
@@ -56,41 +56,48 @@ const structuredData = {
   '@type': 'Organization',
   name: 'Kleenzo',
   description:
-    'Kleenzo makes detergent liquid and dishwash gel for fresh laundry, stain removal, and everyday home cleaning.',
-  email: 'Kleenzosurfactants@gmail.com',
-  telephone: '+91-8140888900',
+    'Kleenzo makes phenyl, floor cleaner, and toilet cleaner for clean homes, healthy spaces, and everyday hygiene.',
+  email: 'info@kleenzo.in',
+  telephone: '+91-9979555966',
+  slogan: 'Clean home, healthy life',
   sameAs: [],
   makesOffer: [
     {
       '@type': 'Offer',
+      priceCurrency: 'INR',
+      price: '130',
       itemOffered: {
         '@type': 'Product',
-        name: 'Kleenzo Washing Liquid Detergent',
+        name: 'Kleenzo Phenyl',
         description:
-          'Fabric detergent liquid with brighteners, softeners, fabric conditioners, stain removal, and jasmine fragrance.',
-        category: 'Laundry Detergent',
+          'Disinfectant phenyl with long-lasting freshness and everyday germ protection.',
+        category: 'Disinfectant Cleaner',
         brand: { '@type': 'Brand', name: 'Kleenzo' },
       },
     },
     {
       '@type': 'Offer',
+      priceCurrency: 'INR',
+      price: '250',
       itemOffered: {
         '@type': 'Product',
-        name: 'Kleenzo Lime Dishwash Gel',
+        name: 'Kleenzo Floor Cleaner',
         description:
-          'Lime dishwash gel for grease removal, sparkling utensils, fresh fragrance, and gentle hand care.',
-        category: 'Dishwashing Detergent',
+          'Floor cleaner for deep cleaning, shine, and fresh regular floor care.',
+        category: 'Floor Cleaner',
         brand: { '@type': 'Brand', name: 'Kleenzo' },
       },
     },
     {
       '@type': 'Offer',
+      priceCurrency: 'INR',
+      price: '200',
       itemOffered: {
         '@type': 'Product',
-        name: 'Kleenzo Strawberry Handwash',
+        name: 'Kleenzo Toilet Cleaner',
         description:
-          'Strawberry handwash for clean, fresh-feeling hands with sweet fragrance, moisturizing feel, and everyday germ protection.',
-        category: 'Hand Wash',
+          'Toilet cleaner for stain removal, hygiene, and fresh bathroom care.',
+        category: 'Toilet Cleaner',
         brand: { '@type': 'Brand', name: 'Kleenzo' },
       },
     },
@@ -107,7 +114,7 @@ const Seo = () => {
     upsertMeta('description', seo.description);
     upsertMeta(
       'keywords',
-      'Kleenzo detergent, detergent liquid, laundry liquid, fabric liquid detergent, dishwash gel, lime dishwash gel, strawberry handwash, handwash, stain remover detergent, home cleaning products'
+      'Kleenzo phenyl, Kleenzo floor cleaner, Kleenzo toilet cleaner, phenyl price, floor cleaner price, toilet cleaner price, 5 LTR cleaner, 10 LTR cleaner, 20 LTR cleaner, home cleaning products'
     );
     upsertMeta('robots', 'index, follow');
     upsertMeta('og:title', seo.title, 'property');

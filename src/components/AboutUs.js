@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 
 const values = [
   'Cleaning formulas built for Indian homes',
-  'Laundry care that is tough on stains and gentle on fabrics',
-  'Dishwash care with grease removal and fresh lime fragrance',
+  'Phenyl for disinfectant cleaning and lasting freshness',
+  'Floor cleaner for deep cleaning and shine',
+  'Toilet cleaner for bathroom stain removal and hygiene',
   'Straightforward ordering through WhatsApp',
 ];
 
@@ -14,7 +15,7 @@ const AboutUs = () => (
       <p className="eyebrow">About Kleenzo</p>
       <h1>Reliable home cleaning products with everyday practicality.</h1>
       <p>
-        Kleenzo is built by Riddhi and Krunal with a simple mission: make cleaning easier, fresher, and more dependable for families. Our focus is on quality detergent liquid, dishwash gel, safe-feeling use, and products that deliver visible results.
+        Kleenzo is built with a simple mission: make cleaning easier, fresher, and more dependable for families and businesses. Our focus is on phenyl, floor cleaner, toilet cleaner, and products that deliver visible results.
       </p>
     </div>
 
@@ -22,7 +23,7 @@ const AboutUs = () => (
       <div className="about-card about-card--feature">
         <h2>Why customers choose Kleenzo</h2>
         <p>
-          From laundry detergent that keeps clothes bright to dishwash gel that removes stubborn grease, Kleenzo products are designed to fit real cleaning routines without unnecessary complexity.
+          From disinfectant phenyl to floor and toilet cleaners, Kleenzo products are designed to fit real cleaning routines without unnecessary complexity.
         </p>
         <Link className="button button--primary" to="/products">
           Explore Products
